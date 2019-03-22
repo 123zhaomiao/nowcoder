@@ -1,60 +1,39 @@
 /**
- * 有两个用字符串表示的非常大的大整数,算出他们的乘积，也是用字符串表示。
- * 不能用系统自带的大整数类型。
+ *如果一个01串任意两个相邻位置的字符都是不一样的,我们就叫这个01串为交错01串。
+ * 例如: "1","10101","0101010"都是交错01串。
+ * 小易现在有一个01串s,小易想找出一个最长的连续子串,并且这个子串是一个交错01串。
+ * 小易需要你帮帮忙求出最长的这样的子串的长度是多少。
+ *
+ * 输入包括字符串s,s的长度length(1 ≤ length ≤ 50),字符串中只包含'0'和'1'
  */
+package 交错01串;
 
-package 大整数相乘;
 import java.util.Scanner;
-
-public class Main{
-    public static void main(String[] args){
-        //获取输入
+public class Main {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        //输入由空格分隔的两个字符串
-        String str1 = scanner.next();
-        String str2 = scanner.next();
-        //翻转两个字符串并将其转为字符数组
-        char[] arr1 = str1.toCharArray();
-        char[] arr2 = str2.toCharArray();
-        System.out.println(LargeNumberMul(arr1,arr2));
+        //1.输入一串字符串
+        String s = scanner.next();
+        //2.将字符串转为字节数组
+        byte[] x= s.getBytes();
+        System.out.println(Max_child(x));
     }
-    public static String LargeNumberMul(char[] arr1,char[] arr2){
-        StringBuffer stringBuffer = new StringBuffer();
-
-        //1.首先将两个字符串转为整形顺便翻转
-        int[] a1 = new int[arr1.length];
-        int k = 0;
-        for(int i = arr1.length-1;i>=0;i--){
-            a1[k] = (arr1[i]-'0');
-            k++;
-        }
-        int[] a2 = new int[arr2.length];
-        k=0;
-        for(int i = arr2.length-1;i>=0;i--){
-            a2[k] = (arr2[i]-'0');
-            k++;
-        }
-        int[]result = new int[arr1.length+arr2.length];
-
-        //2.大整数相乘
-        for(int i = 0 ; i < a1.length;i++) {
-            for (int j = 0; j < a2.length; j++) {
-                int temp = result[i + j] + (a1[i] * a2[j]);
-                result[i + j] = (temp) % 10;
-                result[i + j + 1] = result[i + j + 1] + (temp) / 10;
+    public static int Max_child(byte[] x){
+        int i =0;
+        //3.最大子串长度
+        int count = 0;
+        for(i =0 ; i<x.length-1 ;i++){
+            //4.k值用于记录前一个count值
+            int k = count;
+            count = 0;
+            //5.如果遇到前后数字不一样的情况 计数器+1
+            while(i<(x.length-1)&&x[i+1] != x[i]){
+                count++;
+                i++;
             }
+            //6.当前count和之前的count比较 将较大值赋给count
+            count = count>k?count:k;
         }
-
-        //3.翻转
-        for(int i = result.length-1;i>=0;i--){
-            if(i == result.length-1){
-                if(result[i]!=0){
-                    stringBuffer.append(result[i]);
-                }
-            }else{
-                stringBuffer.append(result[i]);
-            }
-        }
-        return stringBuffer.toString();
+        return count+1;
     }
 }

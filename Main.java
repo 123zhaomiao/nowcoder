@@ -1,68 +1,59 @@
-/**
- * 小易有一个长度为n的整数序列,a_1,...,a_n。然后考虑在一个空序列b上进行n次以下操作:
- * 1、将a_i放入b序列的末尾
- * 2、逆置b序列
- * 小易需要你计算输出操作n次之后的b序列。
- * 输入包括两行,第一行包括一个整数n(2 ≤ n ≤ 2*10^5),即序列的长度。
- * 第二行包括n个整数a_i(1 ≤ a_i ≤ 10^9),即序列a中的每个整数,以空格分割。
- */
+package 每日一练.day01.寻找第K大;
 
-/**
- * 此题禁忌被逆序迷惑 其实只是间隔一个输出而已
- * 例如 ：1 2 3 4  输出 4 2 1 3
- * 例如：1 2 3 4 5 输出5 3 1 2 4
- * 例如：10 28 43 21 1输出1 43 10 28 21
- */
-package 操作序列;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //输入语句
         Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
+        int n =scanner.nextInt();
         int []a = new int[n];
-        int []b = new int[n];
-        for(int i = 0;i < n ; i++){
+        for(int i = 0; i<n;i++){
             a[i] = scanner.nextInt();
         }
-        //调用函数
-        b = OperateSequence(a,b);
-        //输出语句
-        int i=0;
-        for(i = 0;i< n-1; i++){
-            System.out.print(b[i]+" ");
-        }
-        System.out.println(b[i]);
+        int k = scanner.nextInt();
+        System.out.println(findKth(a,n,k));
     }
-    public static int[] OperateSequence(int []a,int[]b){
-        /**
-         * 假设数组长度为偶数
-         * 数组从后先前赋值到下标为1截止 然后从下标为0开始赋值
-         * 假设数组长度为奇数
-         * 数组从后向前赋值到下标为0截止，然后从下标为1开始赋值
-         */
-        if(a.length%2==0){
-            int j = 0;
-            for(int i = a.length-1; i >=0 ;i-=2){
-                b[j] = a[i];
-                j++;
-            }
-            for(int i = 0;i < a.length-1;i+=2){
-                b[j] = a[i];
-                j++;
-            }
+    public static int findKth(int[] a, int n, int K) {
+        return a[sort(a,0,n-1,K)];
+    }
+    public static int sort(int[]a ,int left,int right,int K){
+
+        int pos = quickSort(a,left,right);
+
+        int n = a.length -K;
+        if(n > pos){
+            return sort(a,pos+1,right,K);
+        }else if(n == pos){
+
+            return pos;
         }else{
-            int j = 0;
-            for(int i = a.length-1; i >=0 ;i-=2){
-                b[j] = a[i];
-                j++;
+            return sort(a,left,pos-1,K);
+        }
+    }
+    public static int quickSort(int[] a,int begin,int end){
+        //基准值
+        int key = a[end];
+        int k = end;
+        while(begin != end){
+            //begin找到比基准值大的元素停止
+            while(a[begin] <= key && begin< end){
+                begin++;
             }
-            for(int i = 1;i < a.length-1;i+=2){
-                b[j] = a[i];
-                j++;
+            //end找到比基准值小的元素停止
+            while(a[end] >= key && begin< end){
+                end--;
+            }
+            //交换
+            if(begin != end){
+                int temp = a[begin];
+               a[begin] =a[end];
+               a[end] =temp;
             }
         }
-        return b;
+
+        int temp = a[begin];
+        a[begin] = a[k];
+        a[k] = temp;
+        return begin;
     }
 }

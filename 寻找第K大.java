@@ -1,4 +1,3 @@
-package 每日一练.day01.寻找第K大;
 
 import java.util.Scanner;
 

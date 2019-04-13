@@ -1,19 +1,26 @@
-import java.util.ArrayList;
-import java.util.Stack;
 public class Solution {
-    public boolean IsPopOrder(int [] pushA,int [] popA) {
-        if(pushA.length!=popA.length){return false;}
-        //1.借助辅助栈
-        Stack<Integer> stack = new Stack<>();
-        //用于指向popA
-        int index = 0;
-        for(int i = 0; i < pushA.length;i++){
-            stack.push(pushA[i]);
-            while(!stack.isEmpty() && (stack.peek() == popA[index])){
-                stack.pop();
-                index++;
-            }
+    public int movingCount(int threshold, int rows, int cols)
+    {
+       boolean visite[][] = new boolean[rows][cols];
+       return count(threshold,rows,cols,0,0,visite);
+    }
+    private static int count(int threshold,int rows, int cols,int r,int c,boolean[][]visite){
+        if(r >= rows || r < 0 || c < 0 || c >= cols || visite[r][c] || sum(r)+sum(c) > threshold){
+            return 0;
         }
-        return stack.isEmpty();
+        visite[r][c] = true;
+        return count(threshold,rows,cols,r - 1,c,visite)
+                + count(threshold,rows,cols,r,c - 1,visite)
+                + count(threshold,rows,cols,r + 1,c,visite)
+                + count(threshold,rows,cols,r,c + 1,visite)
+                + 1;
+    }
+    private static int sum(int c){
+        int sum = 0;
+        while(c !=0){
+            sum += c%10;
+            c = c/10;
+        }
+        return sum;
     }
 }

@@ -7,6 +7,7 @@ public class Main{
         for(int i = 0; i < 3;i++){
             x[i] = scanner.nextInt();
         }
+        
         Arrays.sort(x);
         //1.等腰三角形
         if(x[0] == x[1] && x[1] == x[2] && x[2] == x[0]){

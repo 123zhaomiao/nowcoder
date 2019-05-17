@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class Main{
     public static void main(String[] args){
+        
         Scanner scanner = new Scanner(System.in);
         int x1 = scanner.nextInt();
         int k1 = scanner.nextInt();
@@ -14,6 +15,7 @@ public class Main{
         for(int i = 0 ;i < k2 ;i++){
             str2.append(x2);
         }
+        
         String s1 = str1.toString();
         String s2 = str2.toString();
         if(s1.length() > s2.length()){

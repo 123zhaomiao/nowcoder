@@ -10,6 +10,7 @@ public class Main{
         }
         System.out.println(sum(n,x));
     }
+    
     private static long sum(int n,int[] x){
         Arrays.sort(x);
         long sum = 1;

@@ -4,7 +4,6 @@
   */
   package 大整数相乘;
  import java.util.Scanner;
-
   public class Main{
      public static void main(String[] args){
          //获取输入
@@ -16,6 +15,7 @@
          char[] arr1 = str1.toCharArray();
          char[] arr2 = str2.toCharArray();
          System.out.println(LargeNumberMul(arr1,arr2));
+       
      }
      public static String LargeNumberMul(char[] arr1,char[] arr2){
          StringBuffer stringBuffer = new StringBuffer();

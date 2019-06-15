@@ -21,6 +21,7 @@ public class Test {
         }
         System.out.println(maxChildrenNumber(h,w));
     }
+    
     public static int maxChildrenNumber(int[] h,int[]w){
         //3.对h数组进行排序
         Arrays.sort(h);

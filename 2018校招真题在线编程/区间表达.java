@@ -10,7 +10,6 @@ public class Main{
         }
         System.out.println(solution(a));
     }
-    
     private static int solution(int []arr){
         int count = 1;
         for(int i = 0; i < arr.length-1;i++){

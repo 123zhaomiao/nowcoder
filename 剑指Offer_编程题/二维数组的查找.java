@@ -8,7 +8,6 @@ public class Solution {
                 }
             }
         }
-        
         return false;
         //方法2 因为每一行都是有序递增的数组，所以利用二分查找通过遍历每一行得到答案
         for(int i = 0; i<array.length;i++){

@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Test {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
         //1.从键盘获取一个整形值，作为小朋友的个数
         int n = scanner.nextInt();
         //创建数组h,里面有n个元素

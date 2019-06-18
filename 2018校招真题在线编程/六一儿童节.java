@@ -35,6 +35,7 @@ public class Test {
                     break;
                 }
             }
+            
             //5.记录前一个孩子，并重新将h数组排序
             if(j!=0 && h[j-1]!=0 ){
                 h[j-1] = 0;

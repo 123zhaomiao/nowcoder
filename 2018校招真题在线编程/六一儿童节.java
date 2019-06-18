@@ -11,6 +11,7 @@ public class Test {
         {
             h[i]=scanner.nextInt();
         }
+        
         //2.从键盘获取一个整形值，作为巧克力的个数
         int m = scanner.nextInt();
         //创建数组w,里面有m个元素

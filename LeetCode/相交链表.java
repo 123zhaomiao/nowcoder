@@ -28,6 +28,7 @@ public class Solution {
             cur2 = cur2.next;
             len2++;
         }
+        
         cur1 = headA;
         cur2 = headB;
         //长的先走两个链表之间的差

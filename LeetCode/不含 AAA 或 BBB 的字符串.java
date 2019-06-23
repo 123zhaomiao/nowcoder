@@ -16,6 +16,7 @@ class Solution {
                     str.append("b");
                     B-=1;
                 }
+                
             }else if (A < B){
                 if (B > 1) {
                     str.append("bb");

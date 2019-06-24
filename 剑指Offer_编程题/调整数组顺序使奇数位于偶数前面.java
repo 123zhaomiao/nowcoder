@@ -4,6 +4,7 @@ public class Solution {
         //方法1 设置两个辅助数组
         ArrayList<Integer> os = new ArrayList<>();
         ArrayList<Integer> js = new ArrayList<>();
+        
         //遍历数组，将偶数放入os、奇数放入js
         for(int i = 0;i < array.length ; i++){
             if(array[i]%2==0){

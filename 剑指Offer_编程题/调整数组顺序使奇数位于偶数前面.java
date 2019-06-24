@@ -21,7 +21,6 @@ public class Solution {
         }
     }
 }
-
 import java.util.ArrayList;
 public class Solution {
     public void reOrderArray(int [] array) {

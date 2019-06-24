@@ -12,6 +12,7 @@ public class Solution {
                 js.add(array[i]);
             }
         }
+        
         //先放奇数、后方偶数
         for(int i = 0;i < js.size(); i++){
             array[i] = js.get(i);

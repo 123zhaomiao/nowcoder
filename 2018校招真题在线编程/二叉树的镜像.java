@@ -10,7 +10,6 @@ public class TreeNode {
     }
 }
 */
-
 public class Solution {
     public void Mirror(TreeNode root) {
         if(root != null){

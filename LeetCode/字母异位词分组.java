@@ -21,7 +21,6 @@ class Solution {
     }
     return ans;
 }
-
 private boolean equals(String string1, String string2) {
     Map<Character, Integer> hash = new HashMap<>();
     //记录第一个字符串每个字符出现的次数，进行累加

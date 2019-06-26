@@ -21,7 +21,6 @@ class Solution {
         }
     }
     return ans;
-
 }
 
 private boolean equals(String string1, String string2) {

@@ -7,7 +7,6 @@ public class ListNode {
         this.val = val;
     }
 }*/
-
 public class Solution {
     public ListNode ReverseList(ListNode head) {
         if(head == null || head.next == null){return head;}

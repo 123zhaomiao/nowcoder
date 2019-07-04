@@ -13,7 +13,6 @@ class Solution {
         {
             return head;
         }
-        
         //如果链表不为空
         ListNode pre=head;
         ListNode temp=null;

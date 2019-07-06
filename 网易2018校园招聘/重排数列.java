@@ -9,6 +9,7 @@ public class Main{
             //计算能被4整除的数
             int count  = 0 ;
             int count1 = 0 ;
+            
             for(int i = 0 ; i < n ;i++){
                 arr[i] = sc.nextInt();
                 if(arr[i] % 4 == 0){

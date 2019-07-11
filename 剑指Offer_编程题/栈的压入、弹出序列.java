@@ -14,6 +14,7 @@ public class Solution {
                 index++;
             }
         }
+        
         return stack.isEmpty();
     }
 }

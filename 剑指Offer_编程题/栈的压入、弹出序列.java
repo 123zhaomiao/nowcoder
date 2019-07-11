@@ -13,8 +13,7 @@ public class Solution {
                 stack.pop();
                 index++;
             }
-        }
-        
+        } 
         return stack.isEmpty();
     }
 }

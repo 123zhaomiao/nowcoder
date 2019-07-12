@@ -15,6 +15,7 @@ public class Solution {
        if(listNode == null){
            return list;
        }
+        
         //如果只有一个结点返回这个结点
        if(listNode.next == null){
            list.add(listNode.val);

@@ -16,5 +16,6 @@ public class Solution {
             n--;
         }
         return result;  
+        
     }
 }

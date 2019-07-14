@@ -8,7 +8,8 @@ public class Main{
             StringBuffer s = new StringBuffer(str);
             s.reverse();
             Integer num = Integer.parseInt(s.toString());
-            System.out.println(n+num);
+            
+         System.out.println(n+num);
         }
     }
 }

@@ -10,6 +10,5 @@ public class Main{
             Integer num = Integer.parseInt(s.toString());
             System.out.println(n+num);
         }
-        
     }
 }

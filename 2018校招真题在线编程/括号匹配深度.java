@@ -5,6 +5,7 @@ public class Main{
         String s  =  scanner.nextLine();
         System.out.println(depth(s));
     }
+    
     private static int depth(String s){ 
         int dep = 0;
         int max = 0;

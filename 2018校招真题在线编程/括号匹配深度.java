@@ -9,6 +9,7 @@ public class Main{
         int dep = 0;
         int max = 0;
         for(int i = 0 ; i < s.length(); i++){
+            
             char c = s.charAt(i);
             if( c == '('){
                 dep++;
@@ -18,6 +19,7 @@ public class Main{
             }else{
                 dep--;
             }
+            
         }
         return max;
     }

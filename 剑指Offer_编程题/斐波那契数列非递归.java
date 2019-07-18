@@ -8,6 +8,7 @@ public class Solution {
         //斐波那契数列第1个值
         int cur_num = 1;
         //返回值
+       
         int result = 0;
         while(n >= 2){
             result = pre_num + cur_num;

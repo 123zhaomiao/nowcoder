@@ -1,8 +1,7 @@
 class Solution {
     public String decodeString(String s) {
         Stack<String> stack = new Stack<>();
-        Stack<Integer> numstack = new Stack<>();
-        
+        Stack<Integer> numstack = new Stack<>();     
         String res = "";
         int curNum = 0;
         for(int i = 0 ; i < s.length(); i++){

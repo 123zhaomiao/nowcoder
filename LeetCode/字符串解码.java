@@ -25,7 +25,6 @@ class Solution {
                 res = "";
                 
             }else if(c == ']'){
-                
                 //计算
                 StringBuilder str = new StringBuilder(stack.pop());
                 

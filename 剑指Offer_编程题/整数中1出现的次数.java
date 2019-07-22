@@ -5,8 +5,7 @@ public class Solution {
         StringBuffer str = new StringBuffer();
         for(int i = 1 ;i <= n;i++){
             str.append(String.valueOf(i));
-        }
-        
+        }  
         //计算字符串中1的个数
         String s = str.toString();
         char c[] = s.toCharArray();

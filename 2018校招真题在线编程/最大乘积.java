@@ -8,7 +8,6 @@ public class Main{
         for(int i = 0 ; i < n ; i++){
             A[i] = scanner.nextLong();
         }
-
         Arrays.sort(A);
         
         if(A[0] > 0 ){

@@ -8,8 +8,7 @@ public class Main{
         for(int i = 0 ; i < n ; i++){
             A[i] = scanner.nextLong();
         }
-        Arrays.sort(A);
-        
+        Arrays.sort(A);      
         if(A[0] > 0 ){
             System.out.println(A[n-1]* A[n-2]* A[n-3]);
         }else{

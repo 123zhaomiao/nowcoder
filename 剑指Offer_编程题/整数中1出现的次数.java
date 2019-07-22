@@ -1,4 +1,5 @@
 import java.util.Arrays;
+
 public class Solution {
     public int NumberOf1Between1AndN_Solution(int n) {
         StringBuffer str = new StringBuffer();

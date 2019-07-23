@@ -4,6 +4,7 @@ public class Solution {
         int minprice = Integer.MAX_VALUE;
         int maxprofit = 0;
         for (int i = 0; i < prices.length; i++) {
+            //最小值赋值
             if (prices[i] < minprice)
                 minprice = prices[i];
             else if (prices[i] - minprice > maxprofit)

@@ -6,6 +6,7 @@ public class Main{
         int right = scanner.nextInt();
         System.out.println(count(left,right));
     }
+    
     private static int count(int left,int right){
         int count = 0;
         for(int i = left; i <= right;i++){

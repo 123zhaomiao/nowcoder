@@ -24,6 +24,7 @@ public class Main{
         }
         return true;
     }
+    
     private static boolean rev(int num){
         String str = String.valueOf(num);
         int left = 0;

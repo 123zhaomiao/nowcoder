@@ -35,6 +35,7 @@ public class Main{
             left++;
             right--;
         }
+        
         return true;
     }
 }

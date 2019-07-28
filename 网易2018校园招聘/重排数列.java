@@ -17,6 +17,7 @@ public class Main{
                 }else if( arr[i] % 2 == 0)
                     count1++;
             }
+            
             if(count >= n/2 || count >= (n-count1)/2){
                 System.out.println("Yes");
             }else{

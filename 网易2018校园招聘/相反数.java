@@ -7,6 +7,7 @@ public class Main{
             String str = String.valueOf(n);
             StringBuffer s = new StringBuffer(str);
             s.reverse();
+         
             Integer num = Integer.parseInt(s.toString());
          System.out.println(n+num);
         }

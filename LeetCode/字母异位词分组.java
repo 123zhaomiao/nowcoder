@@ -39,7 +39,6 @@ private boolean equals(String string1, String string2) {
             return false;
         }
     }
-    
     //判断每个字符的次数是不是 0 ，不是的话直接返回 false
     Set<Character> set = hash.keySet();
     for (char c : set) {

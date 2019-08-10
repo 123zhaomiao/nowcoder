@@ -15,6 +15,7 @@ class Solution {
         }
         return num;
     }
+    
     private static void dfs(char[][] grid,int x,int y){
         int row = grid.length;
         int col = grid[0].length;

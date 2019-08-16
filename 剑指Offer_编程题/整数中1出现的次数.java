@@ -10,6 +10,7 @@ public class Solution {
         //计算字符串中1的个数
         String s = str.toString();
         char c[] = s.toCharArray();
+        
         Arrays.sort(c);
         int i = 0;
         int count = 0;

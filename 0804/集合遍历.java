@@ -7,7 +7,6 @@ public class Main{
         int[] nums = new int[k];    // 每种颜色的小球个数
         for(int i = 0; i < nums.length; i++)
             nums[i] = sc.nextInt();
-         
         List<String> list = new ArrayList<>();
         solution(nums, list,0, n, "");
         

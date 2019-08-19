@@ -7,7 +7,6 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
-
 class Solution {
     public TreeNode sortedArrayToBST(int[] nums) {
         return solution(nums,0,nums.length-1);

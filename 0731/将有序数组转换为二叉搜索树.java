@@ -23,6 +23,7 @@ class Solution {
         if(end > mid){
             root.right = solution(nums,mid+1,end);
         }
+        
         return root;
     }
 }

@@ -15,7 +15,6 @@ public class Main{
         for(int i = 0 ;i < k2 ;i++){
             str2.append(x2);
         }
-        
         String s1 = str1.toString();
         String s2 = str2.toString();
         if(s1.length() > s2.length()){

@@ -1,4 +1,5 @@
 class Solution {
+    
     public boolean wordBreak(String s, List<String> wordDict) {
         boolean [] dp = new boolean[s.length()+1];
         dp[0] = true;

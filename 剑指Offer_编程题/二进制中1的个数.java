@@ -7,6 +7,7 @@ public class Solution {
                  count++;
              }
         }
+        
         return count;
         //方法2 
         int count = 0;

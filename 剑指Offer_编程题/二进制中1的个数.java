@@ -6,8 +6,7 @@ public class Solution {
              if(((n >> i) & 1) == 1){
                  count++;
              }
-        }
-        
+        } 
         return count;
         //方法2 
         int count = 0;

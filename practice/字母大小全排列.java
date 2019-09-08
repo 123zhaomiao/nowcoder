@@ -9,6 +9,7 @@ class Solution {
             list.add(String.valueOf(s));
             return;
         }
+        
         dg(s,i+1,list);
         if((s[i]>='a'&& s[i]<='z')||
            (s[i]>='A'&& s[i]<='Z')){

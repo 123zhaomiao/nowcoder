@@ -4,6 +4,7 @@ class Solution {
         dg(S.toCharArray(),0,list);
         return list;
     }
+    
     public void dg(char[] s,int i,List<String> list){
         if(i==s.length){
             list.add(String.valueOf(s));

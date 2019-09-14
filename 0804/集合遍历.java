@@ -8,8 +8,7 @@ public class Main{
         for(int i = 0; i < nums.length; i++)
             nums[i] = sc.nextInt();
         List<String> list = new ArrayList<>();
-        solution(nums, list,0, n, "");
-        
+        solution(nums, list,0, n, ""); 
         for(int i =  list.size()-1 ; i >= 0;i--){
             System.out.println(list.get(i));
         }
